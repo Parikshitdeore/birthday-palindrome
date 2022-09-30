@@ -66,42 +66,43 @@ return true;
 return false;
 
 }
+
 function getNextDate(date){
- day = date.day +  1;
- month=date.day +  1;
- year = date.year +1;
-    
-var daysInMonth=[31,28,31,30,31,30,31,31,30,31,30,31]
-
-if(month===2){
-
-    if(isLeapYear(year)){
-        if(day>29){
-            day=1;
-            month++;
-        }
-    }
-    else {
-        if(day>28){
-            day=1;
-            month++;
-    }
-}
-}
-else{
-    if(day>daysInMonth[month-1])
-    day=1
-    month++;
-}
-if(month>12){
-    month=1;
-    year++;
-}
-    return {day:day,month:month,year:year}
-}
-function getNextPalindromeDate(date){
-    var count=0
-    console.log(backupdate)
-    var nextDate=getNextDate(backupdate);
-
-}
+    day = date.day +  1;
+    month=date.day +  1;
+    year = date.year +1;
+       
+   var daysInMonth=[31,28,31,30,31,30,31,31,30,31,30,31]
+   
+   if(month===2){
+   
+       if(isLeapYear(year)){
+           if(day>29){
+               day=1;
+               month++;
+           }
+       }
+       else {
+           if(day>28){
+               day=1;
+               month++;
+       }
+   }
+   }
+   else{
+       if(day>daysInMonth[month-1])
+       day=1
+       month++;
+   }
+   if(month>12){
+       month=1;
+       year++;
+   }
+       return {day:day,month:month,year:year}
+   }
+   function getNextPalindromeDate(date){
+       var count=0
+       console.log(backupdate)
+       var nextDate=getNextDate(backupdate);
+   
+   }
