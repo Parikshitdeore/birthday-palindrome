@@ -55,7 +55,6 @@ for (let i = 0; i < listOfPalindrome.length; i++){
         break;
     }
 }
-console.log(palindrome)
 return palindrome
 }
 
