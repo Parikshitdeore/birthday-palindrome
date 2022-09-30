@@ -8,7 +8,12 @@ function checkIfPalindrome(){
 var date = getDate(inputdate.value)
 var backupdate=date
 var palindrome=isPalindromeForAllFormats(date)
+//testing with temp
+console.log(palindrome)
+console.log(getNextPalindromeDate(backupdate))
 }
+
+
 
 function reverseStr(date){
 var chars=date
@@ -36,6 +41,9 @@ return date
 }
 
 function getAllDateFormats(date){
+    console.log("getalldateformats")
+    console.log(date)
+    toString(date)
     var ddmmyyyy=[date.day+date.month+date.year]
     var mmddyyyy=[date.month+date.day+date.year]
     var yyyymmdd=[date.year+date.month+date.day]
@@ -66,12 +74,15 @@ return true;
 return false;
 
 }
-
+//part2
 function getNextDate(date){
-    day = date.day +  1;
-    month=date.day +  1;
-    year = date.year +1;
+    day =   (date.day+1);
+    month=  (date.month);
+    year =  (date.year);
        
+    typeof day
+    typeof month
+    typeof year
    var daysInMonth=[31,28,31,30,31,30,31,31,30,31,30,31]
    
    if(month===2){
@@ -92,17 +103,26 @@ function getNextDate(date){
    else{
        if(day>daysInMonth[month-1])
        day=1
-       month++;
+       month;
    }
    if(month>12){
        month=1;
        year++;
    }
-       return {day:day,month:month,year:year}
-   }
-   function getNextPalindromeDate(date){
+   console.log("line no 112"+day,month,year)
+     return {day:day,month:month,year:year}
+     console.log(day,month,year)
+}
+
+function getNextPalindromeDate(date){
        var count=0
-       console.log(backupdate)
-       var nextDate=getNextDate(backupdate);
-   
+       var nextDate=getNextDate(date);
+       while(1){
+        var palindromdate=isPalindromeForAllFormats(nextDate)
+        if(palindromdate){
+            break;
+        }
+        nextDate=getNextDate(nextDate)
+       }
+   return (count,nextDate)
    }
