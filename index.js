@@ -5,6 +5,7 @@ var output = document.querySelector("#output")
 button.addEventListener("click",checkIfPalindrome)
 
 function checkIfPalindrome(){
+<<<<<<< HEAD
 var date = getDate(inputdate.value)
 var backupdate=date
 var palindrome=isPalindromeForAllFormats(date)
@@ -142,3 +143,7 @@ return false;
 //               nextDate = getNextDate(nextDate);
 //             }
 //         }
+=======
+console.log(typeof(inputdate.value))
+}
+>>>>>>> parent of 7ead87d (part 1 completed)
