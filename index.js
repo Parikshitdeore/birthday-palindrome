@@ -1,6 +1,6 @@
 var inputdate=document.querySelector("#input-date")
 var button=document.querySelector("#button")
-var output = document.querySelector("output")
+var output = document.querySelector("#output")
 
 button.addEventListener("click",checkIfPalindrome)
 
@@ -55,7 +55,13 @@ for (let i = 0; i < listOfPalindrome.length; i++){
     }
 }
 console.log(palindrome)
-return palindrome
+if(palindrome===true){
+  output.innerText=" Yay, Your Birthday is a Palindrome!"
+}
+else
+{
+  output.innerText=" Sad, Your Birthday is NOT a Palindrome!"
+}
 }
 //part2 - incomplete
 
