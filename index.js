@@ -1,20 +1,13 @@
 var inputdate=document.querySelector("#input-date")
 var button=document.querySelector("#button")
-var output = document.querySelector("#output")
+var output = document.querySelector("output")
 
 button.addEventListener("click",checkIfPalindrome)
 
 function checkIfPalindrome(){
-<<<<<<< HEAD
 var date = getDate(inputdate.value)
-var backupdate=date
 var palindrome=isPalindromeForAllFormats(date)
-console.log(palindrome)
-//testing with temp
-console.log(getNextPalindromeDate(backupdate))
 }
-
-
 
 function reverseStr(date){
 var chars=date
@@ -40,24 +33,6 @@ function getDate(userdate){
     }
 return date
 }
-function getDateAsString(date) {
-    var dateInStr = { day: "", month: "", year: "" };
-  
-    if (date.day < 10) {
-      dateInStr.day = "0" + date.day;
-    } else {
-      dateInStr.day = date.day.toString();
-    }
-  
-    if (date.month < 10) {
-      dateInStr.month = "0" + date.month;
-    } else {
-      dateInStr.month = date.month.toString();
-    }
-  
-    dateInStr.year = date.year.toString();
-    return dateInStr;
-  }
 
 function getAllDateFormats(date){
     var ddmmyyyy=[date.day+date.month+date.year]
@@ -68,27 +43,19 @@ function getAllDateFormats(date){
     var yymmdd=[date.year.slice(-2)+date.month+date.day]
     return [ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd]
 }
-//palindrome list
+
 function isPalindromeForAllFormats(date){
 var listOfPalindrome=getAllDateFormats(date)
 var palindrome=false
-var palindromeList
-
-for (var i = 0; i < listOfPalindrome.length; i++) {
-    var result = isPalindrome(listOfPalindrome[i]);
-    // palindromeList.push(result);
-  }
-  console.log(palindromeList)
-  return palindromeList;
+for (let i = 0; i < listOfPalindrome.length; i++){
+    
+    if(isPalindrome(listOfPalindrome[i])===true){
+        palindrome=true;
+        break;
+    }
 }
-
-function isLeapYear(year){
- if(year%4===0){
-return true;
-}
- if(year % 100===0)
-return false;
-
+console.log(palindrome)
+return palindrome
 }
 //part2 - incomplete
 
@@ -143,7 +110,3 @@ return false;
 //               nextDate = getNextDate(nextDate);
 //             }
 //         }
-=======
-console.log(typeof(inputdate.value))
-}
->>>>>>> parent of 7ead87d (part 1 completed)
