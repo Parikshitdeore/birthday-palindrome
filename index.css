@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  background-color: #111827;
+  color: white;
 }
 
 :root {
@@ -55,4 +57,7 @@ input {
     font-weight: 700;
   font-size: x-large;
   margin: 2rem 0;
+}
+.space{
+  padding: 2rem;
 }
