@@ -19,8 +19,10 @@ body {
 }
 
 h2 {
+  
   font-size: xx-large;
-  margin: 2rem;
+  margin: 4rem;
+  color: #3b82f6;
 }
 
 label {

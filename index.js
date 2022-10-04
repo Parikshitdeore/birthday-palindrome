@@ -35,16 +35,18 @@ function clickHandler() {
       const [count2, prevDate] = getPreviousPalindromeDate(date);
 
       if (count1 > count2) {
-        output.innerText = "The nearest palindrome date is "+" prevDate.day "+" prevDate.month "+" prevDate.year"+" , you missed by "+count2+" days."
+        output.style.color="RED";
+        output.innerText = " The nearest palindrome date is "+ prevDate.day +"-"+prevDate.month+"-"+prevDate.year+" , you missed by "+count2+" days."
       } else {
-        output.innerText = "The nearest palindrome date is "+" nextDate.day "+" nextDate.month "+" nextDate.year"+" , you missed by  "+count1+"  days."
+        output.style.color="RED";
+        output.innerText = " The nearest palindrome date is "+ nextDate.day +"-"+ nextDate.month+"-"+nextDate.year+" , you missed by " +count1+" days."
       }
     } else {
+        output.style.color="GREENYELLOW";
       output.innerText = "Yay! Your birthday is palindrome!";
     }
   }
 }
-
 
 
 
